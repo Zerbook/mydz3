@@ -1,0 +1,298 @@
+.reviews {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 1355px;
+  width: 100%;
+
+  @include tablet {
+    padding: 0 20px
+  }
+
+  @include mobile {
+    padding: 0 20px;
+    height: 1575px;
+  }
+
+  &__bg {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 920px;
+    background-image: url('../images/bg_portfolio.jpg');
+    background-size: cover;
+
+    @include desktop {
+      height: 1000px;
+    }
+
+    @include tablet {
+      height: 60%;
+    }
+
+    @include mobile {
+      height: 60%;
+    }
+
+    &-leave-1 {
+      display: block;
+      position: absolute;
+      bottom: 610px;
+      left: 15%;
+      background-image: url(../images/sprite.png);
+      background-position: 0px -120px;
+      width: 58px;
+      height: 108px;
+
+      @include desktop {
+        left: 25%;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-leave-2 {
+      display: block;
+      position: absolute;
+      bottom: 1180px;
+      left: 1%;
+      background-image: url(../images/sprite.png);
+      background-position: -141px 0px;
+      width: 99px;
+      height: 91px;
+
+      @include desktop {
+        left: 20%;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-leave-3 {
+      display: block;
+      position: absolute;
+      bottom: 715px;
+      right: 0;
+      background-image: url(../images/sprite.png);
+      background-position: 0 0;
+      width: 141px;
+      height: 120px;
+
+      @include desktop {
+        right: 20%;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    position: relative;
+    max-width: 340px;
+    margin-top: 65px;
+    text-align: center;
+    font-family: $webissimo;
+    font-size: 63px;
+    line-height: 58px;
+    padding-bottom: 30px;
+    font-weight: 500;
+
+    @include tablet {
+      font-size: 50px;
+      margin-top: 50px;
+      padding-bottom: 15px;
+      line-height: 50px;
+    }
+
+    @include mobile {
+      font-size: 35px;
+      margin-top: 50px;
+      padding-bottom: 15px;
+      line-height: 40px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $grey;
+      height: 2px;
+      width: 90px;
+
+      @include tablet {
+        height: 3px;
+      }
+
+      @include mobile {
+        height: 3px;
+      }
+    }
+
+    &-pic {
+      display: block;
+      position: absolute;
+      height: 180px;
+      width: 500px;
+      left: 50%;
+      top: -40px;
+      transform: translateX(-50%);
+
+      @include tablet {
+        width: 400px;
+        height: auto;
+        top: -35px;
+      }
+
+      @include mobile {
+        width: 260px;
+        height: auto;
+        top: -45px;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: rgba($light-green, .1);
+      }
+    }
+  }
+
+  &__ppl {
+    display: flex;
+    position: relative;
+    max-width: 755px;
+    margin-top: 30px;
+    justify-content: center;
+
+    @include tablet {
+      margin: 0;
+      font-size: 14px;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      margin: 0;
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+
+  &__quote {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include tablet {
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      padding: 0;
+      justify-content: space-between;
+    }
+
+    &:first-child {
+      margin-right: 15px;
+
+      @include tablet {
+        margin: 0;
+      }
+
+      @include mobile {
+        margin-bottom: 35px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__userpic {
+    display: block;
+    position: relative;
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 0;
+
+    @include mobile {
+      width: 55px;
+      height: 55px;
+    }
+
+    &_kov {
+      background-image: url(../images/kovalchuk.jpg);
+    }
+
+    &_sab {
+      background-image: url(../images/sabantsev.jpg);
+    }
+  }
+
+  &__text {
+    display: block;
+    position: relative;
+    margin: 20px 0;
+    font-style: italic;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -30px;
+      left: 0;
+      background-image: url(../images/sprite.png);
+      background-position: -58px -120px;
+      width: 75px;
+      height: 61px;
+    }
+  }
+
+  &__sign {
+    display: block;
+    max-width: 200px;
+    font-style: italic;
+  }
+
+  &__name {
+    display: block;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 600;
+    color: $green;
+  }
+
+  &__prof {
+    display: block;
+    text-align: center;
+  }
+}

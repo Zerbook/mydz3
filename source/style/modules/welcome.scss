@@ -1,0 +1,135 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  //background-image: url('../images/water.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.parallax-wrapper {
+  position: fixed;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  min-height: 650px;
+  z-index: -1;
+  transform: translateZ(0);
+}
+#scene, .layer {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transform: translateZ(0);
+}
+#scene {
+  position: relative;
+  overflow: hidden;
+}
+.layer {
+  position: absolute;
+  .layer-bg {
+    transform: translate3d(0, 0, 0);
+    // transform-style: preserve-3d
+    backface-visibility: hidden;
+    position: absolute;
+    width: 140%;
+    height: 120%;
+    left: -20%;
+    top: -10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+  }
+
+  @for $i from 0 to 10 {
+    .layer-bg_#{$i} {
+      background-image: url("/assets/images/theme_mountains/parallax/layer_#{$i}.png");
+    }
+  }
+}
+
+
+
+
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 395px;
+  background-color: rgba($grey, .5);
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include desktop {
+    height: auto;
+  }
+
+  @include tablet {
+    height: auto;
+  }
+
+  @include mobile {
+    height: auto;
+    width: 300px;
+  }
+
+  &__info {
+    width: 100%;
+    height: 350px;
+
+    @include desktop {
+      width: auto;
+      height: auto;
+    }
+
+    @include tablet {
+      height: auto;
+      width: auto;
+    }
+
+    @include mobile {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    background-color: rgba(white, .5);
+
+    &-item {
+      display: block;
+      flex-grow: 1;
+      color: white;
+      background-color: $blue-sea; //dark-blue-sea
+      padding: 11px 10px 9px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 400;
+      transition: .5s;
+
+      &:nth-child(2) {
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+      }
+
+      &:hover {
+        background-color: $dark-blue-sea;
+        text-decoration: none;
+      }
+    }
+  }
+}

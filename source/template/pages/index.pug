@@ -1,0 +1,16 @@
+extends ../template
+include ../modules/_mixins
+
+block title
+    title Добро пожаловать!
+
+block content
+    .wrapper
+        +parallax
+        include ../modules/welcome
+        include ../modules/auth
+        button.auth__button(href='#') Авторизоваться
+        include ../modules/copyright
+    //script(src='/assets/js/libs.js' defer)
+    //script(src='/assets/js/app.js' defer)
+    script(src='./assets/js/main.js' defer)

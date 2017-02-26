@@ -1,0 +1,70 @@
+// fonts
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i');
+
+@font-face {
+  font-family: 'sansus_webissimoregular';
+  src: url('../fonts/sansus-webissimo-regular-webfont.woff2') format('woff2'), url('../fonts/sansus-webissimo-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$roboto: Roboto, sans-serif;
+$webissimo: 'sansus_webissimoregular', sans-serif;
+
+// colors
+
+$light-green: #6c9c5a;
+$blue-sea: #10c1a8;
+$dark-blue-sea: #08b09d;
+$green: #4e8839;
+$green-grey: #566358;
+$blue-grey: #c3d6d6;
+$grey: #373e42;
+$link: #6da3bd;
+$bg-green-grey: #ebefe2;
+$bg-grey: #e1e4d7;
+$bg-white: #faf8f0;
+
+
+$stripes-color: #373e42;
+$footer-height: 450px;
+$white: #fff;
+$transition-time: .3s;
+
+// breakpoints
+
+//$large: "screen and (min-width: 1200px)";
+//$desktop: "screen and (min-width: 992px) and (max-width: 1199px)";
+//$laptop: "screen and (min-width: 768px) and (max-width: 991px)";
+//$tablet: "screen and (min-width: 480px) and (max-width: 767px)";
+//$mobile: "screen and (max-width: 479px)";
+
+
+// mixins
+
+@mixin desktop {
+  @media screen and (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width:
+1200px) and (max-width: 1799px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width:
+          768px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

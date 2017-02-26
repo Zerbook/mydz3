@@ -1,0 +1,252 @@
+.header, .header_about {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+
+  @include tablet {
+    height: 505px;
+  }
+
+  @include mobile {
+    height: 560px;
+  }
+
+  &__bg {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+
+    //background-image: url(../images/water.jpg);
+    //background-size: cover;
+
+    @include desktop {
+      background-position: 0;
+    }
+  }
+
+  &__name {
+    display: block;
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include desktop {
+      width: 60%;
+      transform: translate(-50%, -55%);
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    svg {
+      width: 100%;
+      height: 600px;
+      fill: rgba(white, .2);
+    }
+  }
+
+  &__user {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+
+    @include mobile {
+      width: 90%;
+    }
+  }
+
+  &__socials {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    @include mobile {
+      top: 15px;
+      left: 15px;
+    }
+
+    .socials {
+      margin: 0;
+
+      &__link {
+
+        svg {
+          fill: white;
+          transition: .5s;
+
+          &:hover {
+            fill: $blue-grey;
+          }
+        }
+      }
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    width: 1920px;
+    transform: translateX(-50%);
+
+    @include tablet {
+      top: 335px;
+    }
+
+    @include mobile {
+      top: 390px;
+    }
+  }
+
+  &__arrow-left {
+    width: 50%;
+
+    svg {
+      fill: $bg-green-grey;
+    }
+  }
+
+  &__arrow-right {
+    width: 50%;
+    margin-top: 2px;
+
+    @include desktop {
+      margin-right: 1px;
+    }
+
+    svg {
+      fill: white;
+
+      @include tablet {
+        fill: $bg-green-grey;
+      }
+
+      @include mobile {
+        fill: $bg-green-grey;
+      }
+    }
+  }
+
+  &__next {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+
+    @include mobile {
+      bottom: 55px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: rgba(white, .7);
+      transition: .5s;
+
+      &:hover {
+        fill: white;
+      }
+    }
+  }
+
+  &_portfolio {
+
+    @include tablet {
+      height: 505px;
+    }
+
+    @include mobile {
+      height: 560px;
+    }
+
+    .header__arrows {
+      .header__arrow-left, .header__arrow-right {
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+
+  &_blog {
+    height: 440px;
+
+    @include tablet {
+      height: 505px;
+    }
+
+    @include mobile {
+      height: 560px;
+    }
+
+    .header__bg {
+      top: 0;
+      left: 0;
+      background-image: url(../images/water.jpg);
+      background-size: cover;
+      //background-position-y: 540px;
+
+      @include desktop {
+        background-position-y: 715px;
+      }
+
+      @include tablet {
+        background-position-y: 500px;
+      }
+
+      @include mobile {
+        background-position-y: 555px;
+      }
+    }
+
+    .header__arrows {
+      top: 270px;
+
+      @include mobile {
+        top: 385px;
+      }
+
+      .header__arrow-left, .header__arrow-right {
+        svg {
+          fill: $bg-white;
+        }
+      }
+    }
+
+    .header__next {
+      bottom: 100px;
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+
+      @include mobile {
+        display: block;
+        bottom: 50px;
+      }
+    }
+
+    .menu-button {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

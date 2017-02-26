@@ -1,0 +1,124 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 380px;
+  padding: 15px;
+  background-color: rgba(white, .8);
+  border-radius: 10px;
+
+  @include desktop {
+    padding: 35px;
+    width: auto;
+  }
+
+  @include tablet {
+    padding: 35px;
+    width: auto;
+    top: 45%;
+  }
+
+  @include mobile {
+    padding: 30px;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+  }
+
+  &__title {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: $webissimo;
+    font-size: 35px;
+    font-weight: 500;
+    color: $grey;
+
+    @include desktop {
+      width: auto;
+    }
+
+    @include tablet {
+      width: auto;
+    }
+
+    @include mobile {
+      line-height: 41px;
+      padding-bottom: 15px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $grey;
+      height: 2px;
+      width: 90px;
+
+      @include mobile {
+        height: 3px;
+      }
+    }
+  }
+
+  &__list {
+    display: block;
+    padding: 25px;
+
+    @include desktop {
+      padding: 0;
+    }
+
+    @include tablet {
+      padding: 0;
+    }
+
+    @include mobile {
+      padding: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    @include desktop {
+      margin-bottom: 15px;;
+    }
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .fa {
+      display: block;
+      text-align: center;
+      width: 30px;
+      margin-right: 10px;
+      font-size: 25px;
+      color: $blue-sea;
+    }
+  }
+
+  &__name {
+    display: block;
+  }
+}

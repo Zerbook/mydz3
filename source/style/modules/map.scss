@@ -1,0 +1,28 @@
+.map  {
+  position: relative;
+  width: 100%;
+  min-height: 150vh;
+    //background-image: url(../images/map.jpg);
+  //background-size: cover;
+  opacity: 1;
+  &__google-map{
+    position: relative;
+    //width: 100%;
+    min-height: 150vh;
+  }
+
+
+  @include tablet {
+    min-height: 100vh;
+  }
+
+  @include mobile {
+    min-height: 1145px;
+    opacity: 1;
+  }
+}
+
+//.map__google-map {
+//  height: 1070px;
+//  width: 100%;
+//}

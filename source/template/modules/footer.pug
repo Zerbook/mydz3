@@ -1,0 +1,31 @@
+
+footer.footer
+    .footer__row
+        .footer__column.footer__column_left
+            - var pages = {"My works":"works.html", "About me":"about.html", "Blog":"blog.html", "Login":"/"}
+            each p_url, p_title in pages
+                a.footer__link.preload-link(href=p_url)=p_title
+        .footer__column.footer__column_right
+            ul.footer-socials
+                li.footer-socials__item
+                    a.socials__link(href='#')
+                        svg.socials__svg
+                            use(xlink:href='assets/icons/sprite.svg#vk' viewBox="0 0 30.011 17.123")
+                li.footer-socials__item
+                    a.socials__link(href='#')
+                        svg.socials__svg
+                            use(xlink:href='assets/icons/sprite.svg#github' viewBox="0 0 26 22")
+                li.footer-socials__item
+                    a.socials__link(href='#')
+                        svg.socials__svg
+                            use(xlink:href='assets/icons/sprite.svg#in' viewBox="0 0 24 22.938")
+    .footer__row
+        .footer__column.footer__column_left
+            .footer__quote
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+        .footer__column.footer__column_right
+            .footer__copyright
+                span.copyright__text &copy; Наиль Игсанов
+                span.copyright__text создано с любовью в LoftSchool
+                span.copyright__text 2017
+
